@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         User::factory(99)
-            ->sequence(fn ($sequence) => ['name' => 'Person '.$sequence->index + 2])
+            ->sequence(fn ($sequence) => ['name' => 'Person'.($sequence->index + 2)])
             ->create();
 
         foreach (range(1, 20) as $user_id) {
